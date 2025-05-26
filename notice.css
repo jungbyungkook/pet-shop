@@ -1,0 +1,238 @@
+/* 공지사항 페이지 전용 스타일 */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* 페이지 헤더 */
+.page-header {
+    background: linear-gradient(135deg, #f8f6f0 0%, #ede8d8 100%);
+    padding: 4rem 0 2rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 공지사항 콘텐츠 */
+.notice-content {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.notice-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.notice-item {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.notice-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: #8B7355;
+}
+
+.notice-item.important {
+    border-left: 4px solid #e74c3c;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+}
+
+.notice-badge {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.notice-info h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.notice-info h3 a {
+    color: #2c2c2c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.notice-info h3 a:hover {
+    color: #8B7355;
+}
+
+.notice-summary {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.notice-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #999;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 1rem;
+}
+
+.notice-meta .date {
+    font-weight: 500;
+}
+
+.notice-meta .views {
+    color: #8B7355;
+}
+
+/* 페이지네이션 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+.page-btn {
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #ddd;
+    background: white;
+    color: #666;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: #8B7355;
+    color: white;
+    border-color: #8B7355;
+}
+
+.page-btn.active {
+    background: #8B7355;
+    color: white;
+    border-color: #8B7355;
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page-btn.prev,
+.page-btn.next {
+    padding: 0.8rem 1.5rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .page-header {
+        padding: 2rem 0 1rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    .notice-content {
+        padding: 2rem 0;
+    }
+    
+    .notice-item {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .notice-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .notice-summary {
+        font-size: 0.9rem;
+    }
+    
+    .notice-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .pagination {
+        gap: 0.3rem;
+        margin-top: 2rem;
+    }
+    
+    .page-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .page-btn.prev,
+    .page-btn.next {
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .notice-item {
+        padding: 1rem;
+    }
+    
+    .notice-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .notice-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+    }
+} 

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 - JBKONE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <header>
+        <!-- 검색창 -->
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="검색어를 입력하세요" class="search-input">
+                <button class="search-button">🔍</button>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">JBKONE</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="recommend.html">추천</a></li>
+                <li><a href="products.html">전체제품</a></li>
+                <li><a href="best.html">베스트</a></li>
+                <li><a href="event.html">이벤트</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="signup.html" class="active">회원가입</a>
+                <a href="login.html">로그인</a>
+                <a href="cart.html" class="cart-link">
+                    <span>장바구니</span>
+                    <div class="cart-icon">
+                        <span class="cart-count">0</span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="signup-page">
+        <!-- 페이지 헤더 -->
+        <section class="page-header">
+            <div class="container">
+                <h1>🐾 회원가입</h1>
+                <p>JBKONE 가족이 되어 자연주의 펫라이프를 시작하세요</p>
+            </div>
+        </section>
+
+        <!-- 회원가입 폼 -->
+        <section class="signup-content">
+            <div class="container">
+                <div class="signup-wrapper">
+                    <!-- 혜택 안내 -->
+                    <div class="benefits-section">
+                        <h2>🎁 회원가입 혜택</h2>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">💰</div>
+                                <div class="benefit-text">
+                                    <h3>가입 즉시 5,000원 적립금</h3>
+                                    <p>회원가입과 동시에 적립금 지급</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🎫</div>
+                                <div class="benefit-text">
+                                    <h3>첫 구매 10% 할인 쿠폰</h3>
+                                    <p>첫 주문 시 사용 가능한 특별 할인</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🚚</div>
+                                <div class="benefit-text">
+                                    <h3>3만원 이상 무료배송</h3>
+                                    <p>회원 전용 무료배송 혜택</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">⭐</div>
+                                <div class="benefit-text">
+                                    <h3>리뷰 작성 시 적립금</h3>
+                                    <p>포토 리뷰 작성 시 1,000원 적립</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 회원가입 폼 -->
+                    <div class="signup-form-section">
+                        <form class="signup-form" id="signupForm">
+                            <h2>회원 정보 입력</h2>
+                            
+                            <!-- 기본 정보 -->
+                            <div class="form-section">
+                                <h3>기본 정보</h3>
+                                
+                                <div class="form-group">
+                                    <label for="email">이메일 주소 *</label>
+                                    <div class="input-with-button">
+                                        <input type="email" id="email" name="email" required placeholder="example@email.com">
+                                        <button type="button" class="check-btn" id="emailCheckBtn">중복확인</button>
+                                    </div>
+                                    <div class="validation-message" id="emailMessage"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">비밀번호 *</label>
+                                    <input type="password" id="password" name="password" required placeholder="8자 이상, 영문+숫자+특수문자">
+                                    <div class="password-strength" id="passwordStrength"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirmPassword">비밀번호 확인 *</label>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="비밀번호를 다시 입력하세요">
+                                    <div class="validation-message" id="passwordMessage"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name">이름 *</label>
+                                    <input type="text" id="name" name="name" required placeholder="실명을 입력하세요">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">휴대폰 번호 *</label>
+                                    <div class="input-with-button">
+                                        <input type="tel" id="phone" name="phone" required placeholder="010-0000-0000">
+                                        <button type="button" class="check-btn" id="phoneCheckBtn">인증번호 발송</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="verificationGroup" style="display: none;">
+                                    <label for="verification">인증번호</label>
+                                    <div class="input-with-button">
+                                        <input type="text" id="verification" name="verification" placeholder="인증번호 6자리">
+                                        <button type="button" class="check-btn" id="verifyBtn">확인</button>
+                                    </div>
+                                    <div class="timer" id="timer">03:00</div>
+                                </div>
+                            </div>
+
+                            <!-- 추가 정보 -->
+                            <div class="form-section">
+                                <h3>추가 정보 (선택)</h3>
+                                
+                                <div class="form-group">
+                                    <label for="birthdate">생년월일</label>
+                                    <input type="date" id="birthdate" name="birthdate">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>성별</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label">
+                                            <input type="radio" name="gender" value="male">
+                                            <span class="radio-custom"></span>
+                                            남성
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="gender" value="female">
+                                            <span class="radio-custom"></span>
+                                            여성
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="gender" value="other">
+                                            <span class="radio-custom"></span>
+                                            선택안함
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 반려동물 정보 -->
+                            <div class="form-section">
+                                <h3>반려동물 정보 (선택)</h3>
+                                
+                                <div class="form-group">
+                                    <label>반려동물 종류</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="petType" value="dog">
+                                            <span class="checkbox-custom"></span>
+                                            강아지
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="petType" value="cat">
+                                            <span class="checkbox-custom"></span>
+                                            고양이
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="petType" value="other">
+                                            <span class="checkbox-custom"></span>
+                                            기타
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="petName">반려동물 이름</label>
+                                    <input type="text" id="petName" name="petName" placeholder="반려동물의 이름을 입력하세요">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="petAge">반려동물 나이</label>
+                                    <select id="petAge" name="petAge">
+                                        <option value="">선택하세요</option>
+                                        <option value="puppy">1세 미만 (퍼피/키튼)</option>
+                                        <option value="young">1-3세 (성장기)</option>
+                                        <option value="adult">4-7세 (성년기)</option>
+                                        <option value="senior">8세 이상 (시니어)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- 마케팅 동의 -->
+                            <div class="form-section">
+                                <h3>마케팅 정보 수신 동의 (선택)</h3>
+                                
+                                <div class="marketing-consent">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="emailMarketing" value="agree">
+                                        <span class="checkbox-custom"></span>
+                                        이메일로 신상품 및 이벤트 정보 받기
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="smsMarketing" value="agree">
+                                        <span class="checkbox-custom"></span>
+                                        SMS로 주문/배송 및 이벤트 정보 받기
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 약관 동의 -->
+                            <div class="form-section">
+                                <h3>약관 동의</h3>
+                                
+                                <div class="terms-agreement">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="agreeAll" name="agreeAll">
+                                        <span class="checkbox-custom"></span>
+                                        <strong>전체 동의</strong>
+                                    </label>
+                                    
+                                    <div class="terms-list">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="terms" value="service" required>
+                                            <span class="checkbox-custom"></span>
+                                            [필수] 서비스 이용약관 동의
+                                            <a href="#" class="terms-link">보기</a>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="terms" value="privacy" required>
+                                            <span class="checkbox-custom"></span>
+                                            [필수] 개인정보 수집 및 이용 동의
+                                            <a href="#" class="terms-link">보기</a>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="terms" value="age" required>
+                                            <span class="checkbox-custom"></span>
+                                            [필수] 만 14세 이상입니다
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="signup-btn" id="signupBtn">회원가입 완료</button>
+                        </form>
+
+                        <div class="login-link">
+                            <p>이미 회원이신가요? <a href="#login">로그인하기</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">메인</a>
+            <a href="company.html">회사소개</a>
+            <a href="notice.html">공지사항</a>
+            <a href="customer.html">고객센터</a>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html> 

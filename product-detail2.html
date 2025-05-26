@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라탄소재 캡 모자 - JBKONE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product-detail.css">
+</head>
+<body>
+    <header>
+        <!-- 검색창 -->
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="검색어를 입력하세요" class="search-input">
+                <button class="search-button">🔍</button>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">JBKONE</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="recommend.html">추천</a></li>
+                <li><a href="products.html">전체제품</a></li>
+                <li><a href="best.html">베스트</a></li>
+                <li><a href="event.html">이벤트</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="signup.html">회원가입</a>
+                <a href="login.html">로그인</a>
+                <a href="cart.html" class="cart-link">
+                    <span>장바구니</span>
+                    <div class="cart-icon">
+                        <span class="cart-count">0</span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-detail">
+        <div class="product-container">
+            <div class="product-images">
+                <div class="main-image">
+                    <img src="images/product2.jpg" alt="라탄소재 캡 모자 메인 이미지">
+                </div>
+                <div class="thumbnail-images">
+                    <img src="images/product2.jpg" alt="썸네일 1">
+                    <img src="images/product1.jpg" alt="썸네일 2">
+                    <img src="images/product3.jpg" alt="썸네일 3">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1>라탄소재 캡 모자</h1>
+                <p class="price">10,000원</p>
+                <div class="product-description">
+                    <p>자연친화적인 라탄 소재로 만든 반려동물용 캡 모자입니다. 가볍고 통풍성이 좋아 여름철 외출시 자외선 차단에 효과적입니다.</p>
+                    <ul class="features">
+                        <li>천연 라탄 소재</li>
+                        <li>가볍고 통풍성 우수</li>
+                        <li>조절 가능한 턱끈</li>
+                        <li>자외선 차단 효과</li>
+                    </ul>
+                </div>
+                
+                <div class="product-options">
+                    <div class="size-selection">
+                        <label for="size">사이즈</label>
+                        <select id="size">
+                            <option value="">선택하세요</option>
+                            <option value="S">S (소형견)</option>
+                            <option value="M">M (중형견)</option>
+                            <option value="L">L (대형견)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="color-selection">
+                        <label for="color">디자인</label>
+                        <select id="color">
+                            <option value="">선택하세요</option>
+                            <option value="natural">내추럴</option>
+                            <option value="decorated">리본 장식</option>
+                            <option value="pattern">패턴 장식</option>
+                        </select>
+                    </div>
+                    
+                    <div class="quantity">
+                        <label for="quantity">수량</label>
+                        <input type="number" id="quantity" value="1" min="1">
+                    </div>
+                </div>
+                
+                <div class="purchase-buttons">
+                    <button class="buy-now-button">바로 구매하기</button>
+                    <button class="add-to-cart-button">장바구니 담기</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="product-details-tabs">
+            <div class="tabs">
+                <button class="tab-button active">상품 상세</button>
+                <button class="tab-button">리뷰</button>
+                <button class="tab-button">배송/교환/반품</button>
+            </div>
+            <div class="tab-content">
+                <div class="detail-content">
+                    <h3>상품 상세 정보</h3>
+                    <p>• 소재: 라탄, 면</p>
+                    <p>• 제조국: 대한민국</p>
+                    <p>• 세탁방법: 세탁 불가, 부드러운 브러쉬로 먼지 제거</p>
+                    <p>• 제조년월: 2025.01</p>
+                    <img src="images/product2.jpg" alt="상세 이미지">
+                    
+                    <div class="product-long-detail">
+                        <h4>상품 상세 이미지</h4>
+                        <img src="images/products/details/cap_hat_detail.jpg" alt="라탄소재 캡 모자 상세이미지" class="detail-long-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">메인</a>
+            <a href="company.html">회사소개</a>
+            <a href="notice.html">공지사항</a>
+            <a href="customer.html">고객센터</a>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+        // 이미지 캐시 문제 해결을 위한 코드
+        document.addEventListener('DOMContentLoaded', function() {
+            // 모든 이미지에 캐시 방지 코드 적용
+            const allImages = document.querySelectorAll('img');
+            allImages.forEach(img => {
+                if (img.src.includes('placeholder')) return; // 플레이스홀더 이미지는 제외
+                const originalSrc = img.src;
+                img.src = originalSrc + '?v=' + new Date().getTime();
+            });
+        });
+    </script>
+</body>
+</html> 

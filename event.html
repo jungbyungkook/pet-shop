@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 - JBKONE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <header>
+        <!-- 검색창 -->
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="검색어를 입력하세요" class="search-input">
+                <button class="search-button">🔍</button>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">JBKONE</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="recommend.html">추천</a></li>
+                <li><a href="products.html">전체제품</a></li>
+                <li><a href="best.html">베스트</a></li>
+                <li><a href="event.html" class="active">이벤트</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="signup.html">회원가입</a>
+                <a href="login.html">로그인</a>
+                <a href="cart.html" class="cart-link">
+                    <span>장바구니</span>
+                    <div class="cart-icon">
+                        <span class="cart-count">0</span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="event-page">
+        <!-- 페이지 헤더 -->
+        <section class="page-header">
+            <div class="container">
+                <h1>🎉 이벤트</h1>
+                <p>JBKONE의 특별한 혜택과 이벤트를 만나보세요</p>
+            </div>
+        </section>
+
+        <!-- 진행중인 이벤트 -->
+        <section class="ongoing-events">
+            <div class="container">
+                <h2>🔥 진행중인 이벤트</h2>
+                <div class="event-grid">
+                    <div class="event-card main-event">
+                        <div class="event-image">
+                            <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="신규 회원 이벤트">
+                            <div class="event-badge hot">HOT</div>
+                        </div>
+                        <div class="event-info">
+                            <h3>🎁 신규 회원 가입 이벤트</h3>
+                            <p class="event-description">회원 가입 시 즉시 5,000원 적립금 지급! 첫 구매 시 추가 10% 할인까지!</p>
+                            <div class="event-period">
+                                <span class="period-label">이벤트 기간</span>
+                                <span class="period-date">2024.01.01 ~ 2024.12.31</span>
+                            </div>
+                            <div class="event-benefits">
+                                <div class="benefit-item">
+                                    <span class="benefit-icon">💰</span>
+                                    <span>가입 즉시 5,000원 적립금</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <span class="benefit-icon">🎫</span>
+                                    <span>첫 구매 10% 할인 쿠폰</span>
+                                </div>
+                            </div>
+                            <button class="event-btn">이벤트 참여하기</button>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="무료배송 이벤트">
+                            <div class="event-badge">NEW</div>
+                        </div>
+                        <div class="event-info">
+                            <h3>🚚 무료배송 이벤트</h3>
+                            <p class="event-description">3만원 이상 구매 시 전국 무료배송!</p>
+                            <div class="event-period">
+                                <span class="period-date">상시 진행</span>
+                            </div>
+                            <button class="event-btn">자세히 보기</button>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="리뷰 이벤트">
+                        </div>
+                        <div class="event-info">
+                            <h3>⭐ 리뷰 작성 이벤트</h3>
+                            <p class="event-description">포토 리뷰 작성 시 1,000원 적립금 지급!</p>
+                            <div class="event-period">
+                                <span class="period-date">매월 진행</span>
+                            </div>
+                            <button class="event-btn">참여하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 특가 상품 -->
+        <section class="special-products">
+            <div class="container">
+                <h2>⚡ 특가 상품</h2>
+                <p class="section-subtitle">한정 수량! 놓치면 후회하는 특가 혜택</p>
+                <div class="product-grid">
+                    <div class="product-card special">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="특가 강아지 사료">
+                            <div class="product-badge special">특가</div>
+                            <div class="countdown-timer">
+                                <span class="timer-label">남은 시간</span>
+                                <span class="timer-value">23:45:12</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>자연주의 강아지 사료 (특가)</h3>
+                            <p class="product-description">천연 재료로 만든 건강한 사료</p>
+                            <div class="price-info">
+                                <span class="original-price">45,000원</span>
+                                <span class="sale-price">29,900원</span>
+                                <span class="discount">33%</span>
+                            </div>
+                            <div class="stock-info">
+                                <span class="stock-label">남은 수량</span>
+                                <span class="stock-count">12개</span>
+                            </div>
+                            <button class="add-to-cart-btn special">지금 구매하기</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card special">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="특가 펫 간식">
+                            <div class="product-badge special">특가</div>
+                            <div class="countdown-timer">
+                                <span class="timer-label">남은 시간</span>
+                                <span class="timer-value">23:45:12</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>프리미엄 간식 세트 (특가)</h3>
+                            <p class="product-description">3종 간식이 한 세트로!</p>
+                            <div class="price-info">
+                                <span class="original-price">35,000원</span>
+                                <span class="sale-price">19,900원</span>
+                                <span class="discount">43%</span>
+                            </div>
+                            <div class="stock-info">
+                                <span class="stock-label">남은 수량</span>
+                                <span class="stock-count">8개</span>
+                            </div>
+                            <button class="add-to-cart-btn special">지금 구매하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 종료된 이벤트 -->
+        <section class="ended-events">
+            <div class="container">
+                <h2>📋 종료된 이벤트</h2>
+                <div class="event-list">
+                    <div class="event-item ended">
+                        <div class="event-summary">
+                            <h3>🎄 크리스마스 특별 이벤트</h3>
+                            <p>전 상품 20% 할인 + 무료 선물 포장</p>
+                            <span class="event-date">2023.12.20 ~ 2023.12.25</span>
+                        </div>
+                        <div class="event-status">종료</div>
+                    </div>
+                    <div class="event-item ended">
+                        <div class="event-summary">
+                            <h3>🎊 오픈 기념 이벤트</h3>
+                            <p>첫 100명 고객 50% 할인</p>
+                            <span class="event-date">2023.11.01 ~ 2023.11.30</span>
+                        </div>
+                        <div class="event-status">종료</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">메인</a>
+            <a href="company.html">회사소개</a>
+            <a href="notice.html">공지사항</a>
+            <a href="customer.html">고객센터</a>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+    <script src="event.js"></script>
+</body>
+</html> 

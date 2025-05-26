@@ -1,0 +1,369 @@
+/* 공지사항 상세 페이지 전용 스타일 */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* 브레드크럼 */
+.breadcrumb {
+    background-color: #f8f6f0;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.breadcrumb a {
+    color: #8B7355;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 공지사항 상세 */
+.notice-detail {
+    padding: 3rem 0;
+    background-color: #fff;
+}
+
+.notice-detail .container {
+    max-width: 800px;
+}
+
+.notice-header {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+}
+
+.notice-badge {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.notice-badge.important {
+    background: #e74c3c;
+}
+
+.notice-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.notice-meta {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.notice-meta .date {
+    font-weight: 500;
+    color: #666;
+}
+
+.notice-meta .views {
+    color: #8B7355;
+}
+
+/* 공지사항 콘텐츠 */
+.notice-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.notice-content p {
+    margin-bottom: 1.5rem;
+}
+
+.notice-content strong {
+    color: #2c2c2c;
+    font-weight: 600;
+}
+
+/* 정책 섹션 스타일 */
+.policy-section {
+    background: #f8f6f0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    border-left: 4px solid #8B7355;
+}
+
+.policy-section h3 {
+    color: #8B7355;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.policy-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.policy-section li {
+    margin-bottom: 0.8rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.policy-section li:before {
+    content: "•";
+    color: #8B7355;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* 기준 섹션 스타일 */
+.criteria-section {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    border-left: 4px solid #8B7355;
+}
+
+.criteria-section h3 {
+    color: #8B7355;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.criteria-section.highlight {
+    background: linear-gradient(135deg, #fff5f0 0%, #f9f9f9 100%);
+    border-left-color: #e74c3c;
+}
+
+.criteria-section.highlight h3 {
+    color: #e74c3c;
+}
+
+/* 혜택 섹션 스타일 */
+.benefit-section {
+    background: #f0f8ff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    border-left: 4px solid #4a90e2;
+}
+
+.benefit-section h3 {
+    color: #4a90e2;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.benefit-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefit-section li {
+    margin-bottom: 0.8rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.benefit-section li:before {
+    content: "•";
+    color: #4a90e2;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* 팁 섹션 스타일 */
+.tip-section {
+    background: #f5f9f5;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    border-left: 4px solid #27ae60;
+}
+
+.tip-section h3 {
+    color: #27ae60;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+/* 연락처 섹션 스타일 */
+.contact-section {
+    background: #fff9f0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    border-left: 4px solid #f39c12;
+}
+
+.contact-section h3 {
+    color: #f39c12;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-section li {
+    margin-bottom: 0.8rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.contact-section li:before {
+    content: "•";
+    color: #f39c12;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.contact-section.highlight {
+    background: linear-gradient(135deg, #fff5f0 0%, #fff9f0 100%);
+    border-left-color: #e67e22;
+}
+
+.contact-section.highlight h3 {
+    color: #e67e22;
+}
+
+/* 액션 버튼들 */
+.notice-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.btn-back {
+    background: #8B7355;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-back:hover {
+    background: #6d5a42;
+}
+
+.notice-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-prev,
+.btn-next {
+    background: white;
+    color: #666;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+    background: #f8f6f0;
+    border-color: #8B7355;
+    color: #8B7355;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .notice-detail {
+        padding: 2rem 0;
+    }
+    
+    .notice-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .notice-content {
+        font-size: 1rem;
+    }
+    
+    .notice-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .notice-actions {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+    
+    .notice-nav {
+        justify-content: space-between;
+    }
+    
+    .btn-back,
+    .btn-prev,
+    .btn-next {
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .policy-section,
+    .criteria-section {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .notice-header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+    
+    .notice-badge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .policy-section h3,
+    .criteria-section h3 {
+        font-size: 1.1rem;
+    }
+} 

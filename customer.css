@@ -1,0 +1,405 @@
+/* 고객센터 페이지 전용 스타일 */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* 페이지 헤더 */
+.page-header {
+    background: linear-gradient(135deg, #f8f6f0 0%, #ede8d8 100%);
+    padding: 4rem 0 2rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 고객센터 정보 */
+.customer-info {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.info-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #8B7355;
+    padding-bottom: 0.5rem;
+}
+
+.info-content {
+    text-align: left;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item strong {
+    color: #2c2c2c;
+    font-weight: 600;
+    flex: 1;
+}
+
+.info-item span {
+    color: #666;
+    flex: 1;
+    text-align: right;
+}
+
+.info-item a {
+    color: #8B7355;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+.service-message {
+    text-align: center;
+    background: linear-gradient(135deg, #f8f6f0 0%, #ede8d8 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.service-message p {
+    font-size: 1.1rem;
+    color: #2c2c2c;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 문의하기 폼 */
+.contact-form-section {
+    padding: 4rem 0;
+    background-color: #f8f6f0;
+}
+
+.contact-form-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+}
+
+.contact-form-section > p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #8B7355;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #8B7355;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #6d5a42;
+}
+
+/* FAQ 섹션 */
+.faq-section {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 3rem;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    background: #f9f9f9;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f0f0f0;
+}
+
+.faq-question h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin: 0;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8B7355;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 1.5rem;
+    max-height: 200px;
+}
+
+.faq-answer p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .page-header {
+        padding: 2rem 0 1rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    .customer-info {
+        padding: 2rem 0;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .info-card {
+        padding: 2rem;
+    }
+    
+    .contact-form-section {
+        padding: 2rem 0;
+    }
+    
+    .contact-form-section h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-form {
+        padding: 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .faq-section {
+        padding: 2rem 0;
+    }
+    
+    .faq-section h2 {
+        font-size: 2rem;
+    }
+    
+    .faq-question {
+        padding: 1rem;
+    }
+    
+    .faq-answer {
+        padding: 0 1rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .info-card {
+        padding: 1.5rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .info-item span {
+        text-align: left;
+    }
+} 

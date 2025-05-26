@@ -1,0 +1,502 @@
+/* 로그인 페이지 스타일 */
+
+/* 페이지 헤더 */
+.page-header {
+    background: linear-gradient(135deg, #8B7355 0%, #6d5a44 100%);
+    color: white;
+    padding: 3rem 5%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* 로그인 콘텐츠 */
+.login-content {
+    padding: 3rem 5%;
+    background-color: #f8f6f0;
+    min-height: 80vh;
+}
+
+.login-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 로그인 폼 섹션 */
+.login-form-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.login-form h2 {
+    font-size: 1.8rem;
+    color: #2c2c2c;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* 폼 그룹 */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #8B7355;
+    box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+/* 비밀번호 입력 래퍼 */
+.password-input-wrapper {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+    color: #8B7355;
+}
+
+/* 검증 메시지 */
+.validation-message {
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    padding: 0.3rem 0;
+}
+
+.validation-message.success {
+    color: #28a745;
+}
+
+.validation-message.error {
+    color: #dc3545;
+}
+
+/* 폼 옵션 */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #2c2c2c;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+    min-width: 18px;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+    border-color: #8B7355;
+    background-color: #8B7355;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.forgot-password {
+    color: #8B7355;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* 로그인 버튼 */
+.login-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #8B7355 0%, #6d5a44 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 115, 85, 0.3);
+}
+
+.login-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* 구분선 */
+.divider {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.divider span {
+    background-color: white;
+    padding: 0 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 소셜 로그인 */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.social-btn.kakao {
+    border-color: #FEE500;
+    color: #3C1E1E;
+}
+
+.social-btn.kakao:hover {
+    background-color: #FEE500;
+}
+
+.social-btn.naver {
+    border-color: #03C75A;
+    color: #03C75A;
+}
+
+.social-btn.naver:hover {
+    background-color: #03C75A;
+    color: white;
+}
+
+.social-btn.google {
+    border-color: #4285F4;
+    color: #4285F4;
+}
+
+.social-btn.google:hover {
+    background-color: #4285F4;
+    color: white;
+}
+
+.social-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* 회원가입 링크 */
+.signup-link {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.signup-link p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: #8B7355;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* 혜택 섹션 */
+.benefits-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.benefits-section h2 {
+    font-size: 1.5rem;
+    color: #8B7355;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f8f6f0;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-2px);
+}
+
+.benefit-icon {
+    font-size: 1.8rem;
+    min-width: 2.5rem;
+    text-align: center;
+}
+
+.benefit-text h3 {
+    font-size: 1rem;
+    color: #2c2c2c;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.benefit-text p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* 빠른 접근 */
+.quick-access {
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+}
+
+.quick-access h3 {
+    font-size: 1.1rem;
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.quick-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    background-color: #f8f6f0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #2c2c2c;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.quick-link:hover {
+    background-color: #8B7355;
+    color: white;
+    transform: translateX(5px);
+}
+
+.quick-icon {
+    font-size: 1.2rem;
+}
+
+/* 활성 네비게이션 링크 */
+.auth-links a.active {
+    color: #8B7355;
+    font-weight: 600;
+    position: relative;
+}
+
+.auth-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #8B7355;
+    border-radius: 1px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+    .login-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .benefits-section {
+        position: static;
+        order: 2;
+    }
+    
+    .login-form-section {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 2rem 1rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .login-content {
+        padding: 2rem 1rem;
+    }
+    
+    .login-form-section,
+    .benefits-section {
+        padding: 1.5rem;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .social-login {
+        gap: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .login-form-section,
+    .benefits-section {
+        padding: 1rem;
+    }
+    
+    .benefit-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .benefit-icon {
+        min-width: auto;
+    }
+} 

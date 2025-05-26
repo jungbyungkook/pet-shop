@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - JBKONE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <!-- 검색창 -->
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="검색어를 입력하세요" class="search-input">
+                <button class="search-button">🔍</button>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">JBKONE</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="recommend.html">추천</a></li>
+                <li><a href="products.html">전체제품</a></li>
+                <li><a href="best.html">베스트</a></li>
+                <li><a href="event.html">이벤트</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="signup.html">회원가입</a>
+                <a href="login.html" class="active">로그인</a>
+                <a href="cart.html" class="cart-link">
+                    <span>장바구니</span>
+                    <div class="cart-icon">
+                        <span class="cart-count">0</span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="login-page">
+        <!-- 페이지 헤더 -->
+        <section class="page-header">
+            <div class="container">
+                <h1>🔐 로그인</h1>
+                <p>JBKONE에 오신 것을 환영합니다</p>
+            </div>
+        </section>
+
+        <!-- 로그인 폼 -->
+        <section class="login-content">
+            <div class="container">
+                <div class="login-wrapper">
+                    <!-- 로그인 폼 -->
+                    <div class="login-form-section">
+                        <form class="login-form" id="loginForm">
+                            <h2>로그인</h2>
+                            
+                            <div class="form-group">
+                                <label for="email">이메일 주소</label>
+                                <input type="email" id="email" name="email" required placeholder="이메일을 입력하세요">
+                                <div class="validation-message" id="emailMessage"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">비밀번호</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="password" name="password" required placeholder="비밀번호를 입력하세요">
+                                    <button type="button" class="password-toggle" id="passwordToggle">👁</button>
+                                </div>
+                                <div class="validation-message" id="passwordMessage"></div>
+                            </div>
+
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="rememberMe" id="rememberMe">
+                                    <span class="checkbox-custom"></span>
+                                    로그인 상태 유지
+                                </label>
+                                <a href="#forgot-password" class="forgot-password">비밀번호 찾기</a>
+                            </div>
+
+                            <button type="submit" class="login-btn" id="loginBtn">로그인</button>
+                        </form>
+
+                        <div class="divider">
+                            <span>또는</span>
+                        </div>
+
+                        <!-- 소셜 로그인 -->
+                        <div class="social-login">
+                            <button class="social-btn kakao" id="kakaoLogin">
+                                <span class="social-icon">💬</span>
+                                카카오로 로그인
+                            </button>
+                            <button class="social-btn naver" id="naverLogin">
+                                <span class="social-icon">N</span>
+                                네이버로 로그인
+                            </button>
+                            <button class="social-btn google" id="googleLogin">
+                                <span class="social-icon">G</span>
+                                구글로 로그인
+                            </button>
+                        </div>
+
+                        <div class="signup-link">
+                            <p>아직 회원이 아니신가요? <a href="signup.html">회원가입하기</a></p>
+                        </div>
+                    </div>
+
+                    <!-- 혜택 안내 -->
+                    <div class="benefits-section">
+                        <h2>🎁 로그인 혜택</h2>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🛒</div>
+                                <div class="benefit-text">
+                                    <h3>장바구니 저장</h3>
+                                    <p>관심 상품을 장바구니에 담아두세요</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">📦</div>
+                                <div class="benefit-text">
+                                    <h3>주문 내역 확인</h3>
+                                    <p>구매 이력과 배송 상태를 확인하세요</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">💰</div>
+                                <div class="benefit-text">
+                                    <h3>적립금 사용</h3>
+                                    <p>적립금으로 더 저렴하게 구매하세요</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🎯</div>
+                                <div class="benefit-text">
+                                    <h3>맞춤 추천</h3>
+                                    <p>구매 이력 기반 상품 추천 서비스</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quick-access">
+                            <h3>빠른 접근</h3>
+                            <div class="quick-links">
+                                <a href="products.html" class="quick-link">
+                                    <span class="quick-icon">🛍️</span>
+                                    전체제품 보기
+                                </a>
+                                <a href="best.html" class="quick-link">
+                                    <span class="quick-icon">🏆</span>
+                                    베스트 상품
+                                </a>
+                                <a href="event.html" class="quick-link">
+                                    <span class="quick-icon">🎉</span>
+                                    진행중 이벤트
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">메인</a>
+            <a href="company.html">회사소개</a>
+            <a href="notice.html">공지사항</a>
+            <a href="customer.html">고객센터</a>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+    <script src="login.js"></script>
+</body>
+</html> 

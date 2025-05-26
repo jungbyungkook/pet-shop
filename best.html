@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>베스트 제품 - JBKONE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <header>
+        <!-- 검색창 -->
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="검색어를 입력하세요" class="search-input">
+                <button class="search-button">🔍</button>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">JBKONE</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="recommend.html">추천</a></li>
+                <li><a href="products.html">전체제품</a></li>
+                <li><a href="best.html" class="active">베스트</a></li>
+                <li><a href="event.html">이벤트</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="signup.html">회원가입</a>
+                <a href="login.html">로그인</a>
+                <a href="cart.html" class="cart-link">
+                    <span>장바구니</span>
+                    <div class="cart-icon">
+                        <span class="cart-count">0</span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="products-page">
+        <!-- 페이지 헤더 -->
+        <section class="page-header">
+            <div class="container">
+                <h1>🏆 베스트 제품</h1>
+                <p>고객들이 가장 많이 선택한 인기 제품들</p>
+            </div>
+        </section>
+
+        <!-- 베스트 제품 목록 -->
+        <section class="products-content">
+            <div class="container">
+                <div class="products-filter">
+                    <div class="filter-info">
+                        <span class="result-count">총 4개의 베스트 제품</span>
+                    </div>
+                    <div class="sort-options">
+                        <select class="sort-select">
+                            <option value="best">베스트순</option>
+                            <option value="sales">판매량순</option>
+                            <option value="rating">평점순</option>
+                            <option value="review">리뷰순</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="베스트 고양이 사료">
+                            <div class="product-badge best">BEST</div>
+                            <div class="rank-badge">1</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn">♡</button>
+                                <button class="quick-view-btn">👁</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>프리미엄 고양이 사료</h3>
+                            <p class="product-description">고양이 전용 자연주의 사료</p>
+                            <div class="price-info">
+                                <span class="original-price">42,000원</span>
+                                <span class="sale-price">35,000원</span>
+                                <span class="discount">17%</span>
+                            </div>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="review-count">(1,234)</span>
+                            </div>
+                            <div class="sales-info">
+                                <span class="sales-count">월 판매 2,456개</span>
+                            </div>
+                            <button class="add-to-cart-btn">장바구니 담기</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="베스트 펫 간식">
+                            <div class="product-badge best">BEST</div>
+                            <div class="rank-badge">2</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn">♡</button>
+                                <button class="quick-view-btn">👁</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>수제 펫 간식 세트</h3>
+                            <p class="product-description">수작업으로 만든 건강 간식</p>
+                            <div class="price-info">
+                                <span class="original-price">25,000원</span>
+                                <span class="sale-price">20,000원</span>
+                                <span class="discount">20%</span>
+                            </div>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="review-count">(987)</span>
+                            </div>
+                            <div class="sales-info">
+                                <span class="sales-count">월 판매 1,876개</span>
+                            </div>
+                            <button class="add-to-cart-btn">장바구니 담기</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="베스트 케어 용품">
+                            <div class="product-badge best">BEST</div>
+                            <div class="rank-badge">3</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn">♡</button>
+                                <button class="quick-view-btn">👁</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>올인원 케어 세트</h3>
+                            <p class="product-description">샴푸, 컨디셔너, 브러시 세트</p>
+                            <div class="price-info">
+                                <span class="original-price">55,000원</span>
+                                <span class="sale-price">45,000원</span>
+                                <span class="discount">18%</span>
+                            </div>
+                            <div class="rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="review-count">(756)</span>
+                            </div>
+                            <div class="sales-info">
+                                <span class="sales-count">월 판매 1,234개</span>
+                            </div>
+                            <button class="add-to-cart-btn">장바구니 담기</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="베스트 장난감">
+                            <div class="product-badge best">BEST</div>
+                            <div class="rank-badge">4</div>
+                            <div class="product-actions">
+                                <button class="wishlist-btn">♡</button>
+                                <button class="quick-view-btn">👁</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>인터랙티브 퍼즐 토이</h3>
+                            <p class="product-description">지능 발달 도움 장난감</p>
+                            <div class="price-info">
+                                <span class="original-price">18,000원</span>
+                                <span class="sale-price">14,000원</span>
+                                <span class="discount">22%</span>
+                            </div>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="review-count">(543)</span>
+                            </div>
+                            <div class="sales-info">
+                                <span class="sales-count">월 판매 987개</span>
+                            </div>
+                            <button class="add-to-cart-btn">장바구니 담기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">메인</a>
+            <a href="company.html">회사소개</a>
+            <a href="notice.html">공지사항</a>
+            <a href="customer.html">고객센터</a>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+</body>
+</html> 
